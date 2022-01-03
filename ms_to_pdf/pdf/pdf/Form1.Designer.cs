@@ -30,11 +30,11 @@ namespace pdf
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.listBox_work_files = new System.Windows.Forms.ListBox();
+            this.label_work_file = new System.Windows.Forms.Label();
+            this.label_save_file = new System.Windows.Forms.Label();
+            this.textBox_save_folder = new System.Windows.Forms.TextBox();
+            this.button_set_save_folder = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,58 +54,60 @@ namespace pdf
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // listBox1
+            // listBox_work_files
             // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(149, 37);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(450, 100);
-            this.listBox1.TabIndex = 2;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            this.listBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox1_DragDrop);
-            this.listBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox1_DragEnter);
-            this.listBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox1_KeyDown);
+            this.listBox_work_files.AllowDrop = true;
+            this.listBox_work_files.FormattingEnabled = true;
+            this.listBox_work_files.ItemHeight = 12;
+            this.listBox_work_files.Location = new System.Drawing.Point(149, 37);
+            this.listBox_work_files.Name = "listBox_work_files";
+            this.listBox_work_files.Size = new System.Drawing.Size(450, 100);
+            this.listBox_work_files.TabIndex = 2;
+            this.listBox_work_files.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox_work_files.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox1_DragDrop);
+            this.listBox_work_files.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox1_DragEnter);
+            this.listBox_work_files.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox1_KeyDown);
             // 
-            // label1
+            // label_work_file
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(147, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 12);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "作業ファイル（docx,doc,xlsx.xls,pptx,ppt）";
+            this.label_work_file.AutoSize = true;
+            this.label_work_file.Location = new System.Drawing.Point(147, 16);
+            this.label_work_file.Name = "label_work_file";
+            this.label_work_file.Size = new System.Drawing.Size(201, 12);
+            this.label_work_file.TabIndex = 3;
+            this.label_work_file.Text = "作業ファイル（docx,doc,xlsx.xls,pptx,ppt）";
             // 
-            // label2
+            // label_save_file
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(147, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 12);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "保存フォルダ";
+            this.label_save_file.AutoSize = true;
+            this.label_save_file.Location = new System.Drawing.Point(147, 140);
+            this.label_save_file.Name = "label_save_file";
+            this.label_save_file.Size = new System.Drawing.Size(64, 12);
+            this.label_save_file.TabIndex = 4;
+            this.label_save_file.Text = "保存フォルダ";
+            this.label_save_file.Click += new System.EventHandler(this.label_save_file_Click);
             // 
-            // textBox1
+            // textBox_save_folder
             // 
-            this.textBox1.AllowDrop = true;
-            this.textBox1.Location = new System.Drawing.Point(149, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(370, 19);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBox1_DragDrop);
-            this.textBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
+            this.textBox_save_folder.AllowDrop = true;
+            this.textBox_save_folder.Location = new System.Drawing.Point(149, 157);
+            this.textBox_save_folder.Name = "textBox_save_folder";
+            this.textBox_save_folder.Size = new System.Drawing.Size(370, 19);
+            this.textBox_save_folder.TabIndex = 5;
+            this.textBox_save_folder.Text = "Default";
+            this.textBox_save_folder.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox_save_folder.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBox1_DragDrop);
+            this.textBox_save_folder.DragEnter += new System.Windows.Forms.DragEventHandler(this.textBox1_DragEnter);
             // 
-            // button3
+            // button_set_save_folder
             // 
-            this.button3.Location = new System.Drawing.Point(525, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "フォルダ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_set_save_folder.Location = new System.Drawing.Point(525, 155);
+            this.button_set_save_folder.Name = "button_set_save_folder";
+            this.button_set_save_folder.Size = new System.Drawing.Size(74, 23);
+            this.button_set_save_folder.TabIndex = 6;
+            this.button_set_save_folder.Text = "参照";
+            this.button_set_save_folder.UseVisualStyleBackColor = true;
+            this.button_set_save_folder.Click += new System.EventHandler(this.button_set_save_folder_Click);
             // 
             // label3
             // 
@@ -115,6 +117,7 @@ namespace pdf
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 7;
             this.label3.Text = "label_test";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
             // 
@@ -166,6 +169,7 @@ namespace pdf
             this.checkBox1.TabIndex = 10;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 
@@ -176,11 +180,11 @@ namespace pdf
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button_set_save_folder);
+            this.Controls.Add(this.textBox_save_folder);
+            this.Controls.Add(this.label_save_file);
+            this.Controls.Add(this.label_work_file);
+            this.Controls.Add(this.listBox_work_files);
             this.Controls.Add(this.button2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -194,11 +198,11 @@ namespace pdf
 
         #endregion
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBox_work_files;
+        private System.Windows.Forms.Label label_work_file;
+        private System.Windows.Forms.Label label_save_file;
+        private System.Windows.Forms.TextBox textBox_save_folder;
+        private System.Windows.Forms.Button button_set_save_folder;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
